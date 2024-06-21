@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CreditCalc</class>
+ <widget class="QWidget" name="CreditCalc">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>632</width>
+    <height>380</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+  background-color:rgb(135, 131, 124);
+}
+
+background-color : white;</string>
+  </property>
+  <widget class="QLineEdit" name="sum">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>20</y>
+     <width>301</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QLineEdit {
+  background-color: rgb(255, 253, 255);
+  color:  rgb(103, 102, 104); 
+ border: 1px solid black;
+}
+
+background-color : white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_ANN">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>170</y>
+     <width>300</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+  background-color: rgb(16, 116, 16);
+  color: black; 
+  border: 1px solid black;
+}
+
+QPushButton:pressed {
+ background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #ffffff);
+}</string>
+   </property>
+   <property name="text">
+    <string>АННУИТЕТНЫЙ</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_DIFF">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>170</y>
+     <width>300</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+  background-color: rgb(16, 116, 16);
+  color: black; 
+  border: 1px solid black;
+}
+
+QPushButton:pressed {
+ background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #ffffff);
+}</string>
+   </property>
+   <property name="text">
+    <string>ДИФФЕРЕНЦИРОВАННЫЙ</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>251</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QLabel {
+  background-color:rgb(103, 102, 104);
+ border: 1px rgb(198, 197, 234);
+
+}
+
+background-color : white;</string>
+   </property>
+   <property name="text">
+    <string>Сумма кредита :</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="procent">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>120</y>
+     <width>301</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+  background-color: rgb(255, 253, 255);
+  color: rgb(103, 102, 104); 
+ border: 1px solid black;
+}
+
+background-color : white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="deadline">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>70</y>
+     <width>301</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QLineEdit {
+  background-color: rgb(255, 253, 255);
+  color: rgb(103, 102, 104); 
+ border: 1px solid black;
+}
+
+background-color : white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>120</y>
+     <width>251</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QLabel {
+  background-color: rgb(103, 102, 104);
+ border: 1px rgb(198, 197, 234);
+
+}
+
+background-color : white;</string>
+   </property>
+   <property name="text">
+    <string>Процентная ставка :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>69</y>
+     <width>251</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QLabel {
+  background-color: rgb(103, 102, 104);
+ border: 1px rgb(198, 197, 234);
+
+}
+
+background-color : white;</string>
+   </property>
+   <property name="text">
+    <string>Cрок кредита :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>230</y>
+     <width>300</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QLabel {
+  background-color:rgb(103, 102, 104);
+ border: 1px rgb(198, 197, 234);
+
+}
+
+background-color : white;</string>
+   </property>
+   <property name="text">
+    <string>Ежемесячный платеж :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>330</y>
+     <width>300</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QLabel {
+  background-color:rgb(103, 102, 104);
+ border: 1px rgb(198, 197, 234);
+
+}
+
+background-color : white;</string>
+   </property>
+   <property name="text">
+    <string>Общая выплата :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>280</y>
+     <width>300</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QLabel {
+  background-color: rgb(103, 102, 104);
+ border: 1px rgb(198, 197, 234);
+
+}
+
+background-color : white;</string>
+   </property>
+   <property name="text">
+    <string>Переплата по кредиту :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="payment">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>230</y>
+     <width>301</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+  background-color: rgb(255, 253, 255);
+  color: rgb(103, 102, 104); 
+ border: 1px solid black;
+}
+
+background-color : white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="over">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>280</y>
+     <width>301</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+  background-color: rgb(255, 253, 255);
+  color: rgb(103, 102, 104); 
+ border: 1px solid black;
+}
+
+background-color : white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="total">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>330</y>
+     <width>301</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+  background-color: rgb(255, 253, 255);
+  color: rgb(103, 102, 104); 
+ border: 1px solid black;
+}
+
+background-color : white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
